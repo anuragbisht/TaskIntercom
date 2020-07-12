@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TaskIntercom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ag-PH-9Ee">
+                                <rect key="frame" x="0.0" y="112" width="414" height="750"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i9p-NP-EaG">
+                                <rect key="frame" x="20" y="64" width="374" height="29"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="In Range"/>
+                                </segments>
+                                <connections>
+                                    <action selector="customerTypeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="x4P-fM-YAh"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ag-PH-9Ee" firstAttribute="top" secondItem="i9p-NP-EaG" secondAttribute="bottom" constant="20" id="GCv-DV-Ain"/>
+                            <constraint firstItem="4ag-PH-9Ee" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UkW-La-kee"/>
+                            <constraint firstItem="i9p-NP-EaG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Xwo-dY-SB3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i9p-NP-EaG" secondAttribute="trailing" constant="20" id="aub-BL-oVx"/>
+                            <constraint firstItem="4ag-PH-9Ee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j1f-4q-XcA"/>
+                            <constraint firstItem="i9p-NP-EaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jdT-dv-1Ds"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ag-PH-9Ee" secondAttribute="trailing" id="mTG-sx-gNG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="4ag-PH-9Ee" id="AJc-nV-Gaq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="75"/>
+        </scene>
+    </scenes>
+</document>
