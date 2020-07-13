@@ -1,5 +1,7 @@
 # TaskIntercom
   
+  <img src = "TaskScreenShot1.png" width= "200" height = "350">
+  
   
   ## Install
 
